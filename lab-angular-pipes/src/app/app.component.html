@@ -1,0 +1,112 @@
+<div class="header">
+  <header> Pipes in Angular</header>
+</div>
+<div class="pipe">
+
+  <div class="container1">
+    <div class="event">
+      <h3>Dates & Time Pipe</h3>
+      <button class="field" (click)="date()">Submit</button>
+      <h4>Full Current Date</h4>
+      <p>{{currentDate | date:'full'}}</p>
+      <h4>Medium</h4>
+      <p>{{currentDate | date:'mediumDate'}}</p>
+      <h4>Short</h4>
+      <p>{{currentDate | date:'shortDate'}}</p>
+      <h4>Long</h4>
+      <p>{{currentDate | date:'longDate'}}</p>
+      <h4>Full</h4>
+      <p>{{currentDate | date:'fullDate'}}</p>
+      <h4>Month</h4>
+      <p>{{currentDate | date:'MM'}}</p>
+      <h4>ShortTime</h4>
+      <p>{{currentDate | date:'shortTime'}}</p>
+      <h4>MediumTime</h4>
+      <p>{{currentDate | date:'mediumTime'}}</p>
+      <h4>Longtime</h4>
+      <p>{{currentDate | date:'longTime'}}</p>
+      <h4>FullTime</h4>
+      <p>{{currentDate | date:'fullTime'}}</p>
+    </div>
+  </div>
+
+
+  <div class="container1">
+    <div class="event">
+      <h3>Number Pipes</h3>
+      <input class="field" type="text" (ngModel)="number" #num>
+      <button class="field" (click)="pipeNum(num.value)">Submit</button>
+      <h4>Before Decimal min-digit-1 After decimal min-2-digits To max-3-digits</h4>
+      <p>{{number | number:'1.2-3'}}</p>
+      <h4>Before Decimal min-digit-3 After decimal min-4-digits To max-5-digits</h4>
+      <p>{{number | number:'3.4-5'}}</p>
+      <h4>Before Decimal min-digit-1 After decimal min-1-digits To max-2-digits</h4>
+      <p>{{number | number:'3.1-2'}}</p>
+    </div>
+
+    <div class="event">
+      <h3>Percentage Pipe</h3>
+      <input class="field" type="text" (ngModel)="number" #num1>
+      <button class="field" (click)="pipePer(num1.value)">Submit</button>
+      <h4>2 decimal place</h4>
+      <p>{{number | percent:'0.2'}}</p>
+      <h4>3-5 decimal place</h4>
+      <p>{{number | percent:'4.3-5'}}</p>
+    </div>
+
+  </div>
+
+</div>
+
+
+<hr>
+
+
+<div class="pipe">
+  <div class="container1">
+    <div class="event">
+      <h3>Pipes-Currency</h3>
+      <input class="field" type="text" (ngModel)="number" #currency>
+      <button class="field" (click)="Number(currency.value)">Submit</button>
+      <h4>Rupees</h4>
+      <p>{{number | currency: "INR"}}</p>
+      <h4>Rupees ISO CODE</h4>
+      <p>{{number | currency: "INR": 'code'}}</p>
+      <h4>US Dollars</h4>
+      <p>{{number | currency: "USD"}}</p>
+      <h4>US Dollars ISO CODE</h4>
+      <p>{{number | currency: "USD" : 'code'}}</p>
+      <h4>EURO</h4>
+      <p>{{number | currency: "EUR"}}</p>
+      <h4>EURO ISO CODE</h4>
+      <p>{{number | currency: "EUR" : 'code'}}</p>
+    </div>
+  </div>
+
+
+  <div class="container1">
+    <div class="event">
+      <h3>Pipes-Uppercase & LowerCase</h3>
+      <input class="field" type="text" (ngModel)="name" #names2>
+      <button class="field" (click)="str(names2.value)">Submit</button>
+      <h4>UpperCase</h4>
+      <p>{{name | uppercase}}</p>
+      <h4>Lowercase</h4>
+      <p>{{name | lowercase}}</p>
+      <h4>Title Case</h4>
+      <p>{{name | titlecase}}</p>
+      <h4>Slice-3 characters</h4>
+      <p>{{name | slice:3}}</p>
+      <h4>Slice-3-to-5 characters</h4>
+      <p>{{name | slice:3}}</p>
+      <h4>JSON Pipe</h4>
+      <p>{{person | json}}</p>
+
+    </div>
+  </div>
+
+
+
+</div>
+
+<hr>
